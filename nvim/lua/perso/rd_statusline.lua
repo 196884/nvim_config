@@ -1,15 +1,3 @@
-vim.api.nvim_exec([[
-    hi RdStatusLineModeAccent       ctermfg=black ctermbg=blue
-    hi RdStatusLineInsertModeAccent ctermfg=black ctermbg=darkgreen
-    hi RdStatusLineAccent           ctermfg=black ctermbg=white
-    hi RdStatusLineNCAccent         ctermfg=black ctermbg=lightgrey
-]], false)
-
-vim.api.nvim_set_hl(0, "RdStatusLineModeAccent",       {fg="white", bg="blue"})
-vim.api.nvim_set_hl(0, "RdStatusLineInsertModeAccent", {fg="white", bg="darkgreen"})
-vim.api.nvim_set_hl(0, "RdStatusLineAccent",           {fg="black", bg="white"})
-vim.api.nvim_set_hl(0, "RdStatusLineNCAccent",         {fg="black", bg="lightgrey"})
-
 local modes = {
     ["n"] = "NORMAL",
     ["no"] = "NORMAL",
