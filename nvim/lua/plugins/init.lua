@@ -1,7 +1,35 @@
 return {
-    { "tpope/vim-fugitive" },
+    { "vimwiki/vimwiki", },
+    {
+        "tpope/vim-fugitive",
+        cmd = "Git",
+    },
+    {
+        "rbong/vim-flog",
+        lazy = true,
+        cmd = { "Flog", "Flogsplit", "Floggit" },
+        dependencies = {
+            "tpope/vim-fugitive",
+        },
+    },
     --{ "elihunter173/dirbuf.nvim" },
-    { "christoomey/vim-tmux-navigator" },
+    {
+        "christoomey/vim-tmux-navigator",
+        cmd = {
+            "TmuxNavigateLeft",
+            "TmuxNavigateDown",
+            "TmuxNavigateUp",
+            "TmuxNavigateRight",
+            "TmuxNavigatePrevious",
+        },
+        keys = {
+            { "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
+            { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
+            { "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
+            { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
+            { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
+        },
+    },
     { "nvim-tree/nvim-web-devicons", opts = {}, },
     {
         "ibhagwan/fzf-lua",
