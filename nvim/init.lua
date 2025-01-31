@@ -1,4 +1,6 @@
--- vim.opt.termguicolors = false
+vim.opt.termguicolors = false
+
+-- important to set it before loading the plugins
 vim.g.mapleader = ","
 
 -- tabs/indents
@@ -19,6 +21,7 @@ vim.o.showmatch  = true
 
 vim.o.scrolloff  = 5
 vim.g.nohidden   = true
+vim.g.noswapfile = true
 
 vim.keymap.set('n', '<leader>th', ':set hlsearch!<CR>', { desc = 'Toggle search highlighting' })
 vim.keymap.set('n', '<leader>ln', ':set number!<CR>', { desc = 'Toggle line numbers' })
