@@ -1,7 +1,7 @@
 vim.opt.termguicolors = false
 
 -- important to set it before loading the plugins
-vim.g.mapleader = ","
+vim.g.mapleader   = ","
 
 -- tabs/indents
 vim.o.tabstop     = 4
@@ -25,6 +25,9 @@ vim.g.noswapfile = true
 
 vim.keymap.set('n', '<leader>th', ':set hlsearch!<CR>', { desc = 'Toggle search highlighting' })
 vim.keymap.set('n', '<leader>ln', ':set number!<CR>', { desc = 'Toggle line numbers' })
+vim.keymap.set('n', '<leader>cns', '0inamespace <ESC>yypi} // <ESC>kA {<CR><ESC>', { desc = 'Create C++ namespace' })
+vim.keymap.set('n', '<leader>cc', 'Iclass <ESC>yyo{<CR>};  //<ESC>pkJ<ESC>ko<ESC>', { desc = 'Create C++ class' })
+vim.keymap.set('n', '<leader>cs', 'Istruct <ESC>yyo{<CR>};  //<ESC>pkJ<ESC>ko<ESC>', { desc = 'Create C++ struct' })
 
 require("config.lazy")
 require("fzf-lua")
