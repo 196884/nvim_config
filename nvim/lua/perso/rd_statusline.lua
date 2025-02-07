@@ -90,7 +90,11 @@ end
 RdStatusline.inactive = function()
     return table.concat({
         "%#RdStatusLineNCAccent#",
-        " %F"
+        file_path(),
+        file_name(),
+        file_type(),
+        line_info(),
+        --" %F"
     })
 end
 
